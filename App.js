@@ -59,7 +59,7 @@ function Home() {
       <Tab.Screen name="feed" component={Feed} />
       <Tab.Screen name="conversation" component={Conversation} />
       <Tab.Screen name="addPost" component={AddPost} />
-      <Tab.Screen name="favorites" component={Favorites} />
+      <Tab.Screen name="favorites" component={Favorites} options={{ headerShown: false }} />
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   )
