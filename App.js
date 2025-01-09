@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, Image, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
@@ -11,19 +11,18 @@ import {
 } from '@expo-google-fonts/poppins';
 import { Ionicons } from '@expo/vector-icons';
 
-
-//screen
+// screens
 import Feed from './screens/Feed';
 import AddPost from './screens/AddPost';
 import Conversation from './screens/Conversation';
 import Favorites from './screens/Favorites';
 import Profile from './screens/Profile';
+import ConversationDetail from './screens/ConversationDetail';
+import { LinearGradient } from 'expo-linear-gradient';
 
-
-//navigation
+// navigation
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
 
 function Home() {
   return (
@@ -65,7 +64,6 @@ function Home() {
   )
 }
 
-
 export default function App() {
   let [fontsLoaded] = useFonts({
     Poppins_400Regular,
@@ -80,6 +78,38 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+
+        <Stack.Screen
+          name="ConversationDetail"
+          component={ConversationDetail}
+          options={({ route }) => ({
+
+            headerTitle: () => (
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Image
+                  source={{ uri: route.params.portrait || 'https://placekitten.com/200/200' }}
+                  style={{ width: 30, height: 30, borderRadius: 15, marginRight: 10 }}
+                />
+                <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 18 }}>
+                  {route.params.correspondentName || 'Conversation'}
+                </Text>
+              </View>
+            ),
+            headerStyle: {
+              backgroundColor: 'transparent',
+              borderBottomWidth: 0,
+              elevation: 0,
+              shadowOpacity: 0,
+            },
+            headerBackground: () => (
+              <LinearGradient
+                colors={['#f8f9fa', '#a8dadc']}
+                style={{ flex: 1 }}
+              />
+            ),
+          })}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
