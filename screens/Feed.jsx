@@ -5,6 +5,8 @@ import Title from '../components/Title'
 import { FlatList } from 'react-native-gesture-handler'
 import Portait from '../components/Portait'
 import PortraitHeader from '../components/PortraitHeader'
+import favories from "../data/favories.json";
+import Card from '../components/Card'
 
 const Feed = () => {
 
@@ -33,6 +35,15 @@ const Feed = () => {
                 contentContainerStyle={styles.list}
                 showsHorizontalScrollIndicator={false}
 
+            />
+            <FlatList
+                data={favories.list}
+                renderItem={({ item }) => <Card items={item} />}
+                keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
+                snapToInterval={312}
+                decelerationRate={"fast"}
+                style={{ marginBottom: 150 }}
             />
         </SafeAreaView>
     )
