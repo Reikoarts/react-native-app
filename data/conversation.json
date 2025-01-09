@@ -1,0 +1,128 @@
+{
+    "conversations": [
+        {
+            "correspondent": {
+                "conversationId": "1",
+                "name": "Alice Dupont",
+                "phone": "+33612345678",
+                "image": "https://randomuser.me/api/portraits/women/1.jpg"
+            },
+            "lastMessage": {
+                "content": "À bientôt !",
+                "timestamp": "2025-01-09T10:30:00Z"
+            }
+        },
+        {
+            "correspondent": {
+                "conversationId": "2",
+                "name": "Jean Martin",
+                "phone": "+33698765432",
+                "image": "https://randomuser.me/api/portraits/men/2.jpg"
+            },
+            "lastMessage": {
+                "content": "On se voit demain ?",
+                "timestamp": "2025-01-08T18:45:00Z"
+            }
+        },
+        {
+            "correspondent": {
+                "conversationId": "3",
+                "name": "Le bg",
+                "phone": "+33698765432",
+                "image": "https://randomuser.me/api/portraits/men/4.jpg"
+            },
+            "lastMessage": {
+                "content": "le fou",
+                "timestamp": "2025-01-08T18:45:00Z"
+            }
+        }
+    ],
+    "messages": {
+        "1": [
+            {
+                "sender": "me",
+                "content": "Salut Alice, comment ça va ?",
+                "timestamp": "2025-01-09T09:00:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "Allo ?! répond",
+                "timestamp": "2025-01-09T09:01:00Z"
+            },
+            {
+                "sender": "Alice Dupont",
+                "content": "Ça va super, merci ! Et toi ?",
+                "timestamp": "2025-01-09T09:05:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "Ça va bien aussi, merci !",
+                "timestamp": "2025-01-09T09:06:00Z"
+            },
+            {
+                "sender": "Alice Dupont",
+                "content": "Tant mieux ! Quoi de neuf ?",
+                "timestamp": "2025-01-09T09:07:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "Pas grand-chose, je me prépare pour le week-end. Et toi ?",
+                "timestamp": "2025-01-09T09:08:00Z"
+            },
+            {
+                "sender": "Alice Dupont",
+                "content": "Pareil, je pense aller faire un tour à la plage si le temps est sympa.",
+                "timestamp": "2025-01-09T09:09:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "Ça sonne super ! Tu veux qu'on se retrouve ce week-end alors ?",
+                "timestamp": "2025-01-09T09:10:00Z"
+            },
+            {
+                "sender": "Alice Dupont",
+                "content": "Oui, avec plaisir. À bientôt !",
+                "timestamp": "2025-01-09T10:30:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "Parfait, je suis impatient. Je vais organiser ça.",
+                "timestamp": "2025-01-09T10:35:00Z"
+            },
+            {
+                "sender": "Alice Dupont",
+                "content": "Génial, à très vite !",
+                "timestamp": "2025-01-09T10:40:00Z"
+            },
+            {
+                "sender": "me",
+                "content": "À bientôt ! 😊",
+                "timestamp": "2025-01-09T10:45:00Z"
+            }
+        ],
+        "2": [
+            {
+                "sender": "me",
+                "content": "Salut Jean, dispo pour un café ?",
+                "timestamp": "2025-01-08T17:30:00Z"
+            },
+            {
+                "sender": "Jean Martin",
+                "content": "Oui, bien sûr. On se voit demain ?",
+                "timestamp": "2025-01-08T18:45:00Z"
+            }
+        ],
+        "3": [
+            {
+                "sender": "me",
+                "content": "Salut bg, comment ça va ?",
+                "timestamp": "2025-01-08T17:30:00Z"
+            },
+            {
+                "sender": "Le bg",
+                "content": "le fou",
+                "timestamp": "2025-01-08T18:45:00Z"
+            }
+        ]
+    }
+}
