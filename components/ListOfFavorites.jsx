@@ -53,20 +53,17 @@ const ListOfFavorites = () => {
       timeFavorite: "5 hrs ago",
     },
   ];
-  const renderItem = ({ item = arrayFavorites }) => <Card items={item} />;
 
   return (
-    <View>
-      <FlatList
-        data={arrayFavorites}
-        renderItem={renderItem}
-        keyExtractor={(item) => item.id}
-        showsVerticalScrollIndicator={false}
-        snapToInterval={312}
-        decelerationRate={"fast"}
-        style={{ marginBottom: 100 }}
-      />
-    </View>
+    <FlatList
+      data={arrayFavorites}
+      renderItem={({ item }) => <Card items={item} />}
+      keyExtractor={(item) => item.id}
+      showsVerticalScrollIndicator={false}
+      snapToInterval={312}
+      decelerationRate={"fast"}
+      style={{ marginBottom: 150 }}
+    />
   );
 };
 
